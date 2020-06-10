@@ -1,0 +1,20 @@
+.blog__contentContainer {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+
+  // justify-content: center;
+  padding-top: 100px;
+}
+
+.blog__title {
+  color: white;
+  text-align: center;
+}
+
+.blog__post {
+  // background-color: $light-box-background;
+  margin: 20px 0;
+  min-height: 100px;
+}

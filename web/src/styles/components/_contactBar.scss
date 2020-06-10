@@ -1,0 +1,53 @@
+.contactBar {
+  background-color: $secondary-color;
+  color: white;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "start phone quote";
+  height: $contact-bar-height;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    color: $primary-color;
+    font-weight: 800;
+  }
+}
+
+.contactBar__phone {
+  display: flex;
+  grid-area: phone;
+}
+
+.contactBar--bold {
+  font-weight: 800;
+}
+
+.contactBar__quote {
+  align-items: center;
+  background-color: $button-color;
+  display: flex;
+  font-size: 1.25rem;
+  grid-area: quote;
+  height: 100%;
+  justify-content: center;
+  justify-self: center;
+  padding: 0 15px;
+  text-decoration: none;
+  // width: 60%;
+}
+
+.contactBar__quote:hover {
+  background-color: white;
+  // border: 3px solid $secondary-color;
+  // color: black;
+}
+
+@media screen and (max-width: $break-mm) {
+  .contactBar {
+    display: none;
+  }
+}

@@ -1,0 +1,108 @@
+$primary-color: rgb(18, 47, 111);
+$secondary-color: rgb(231, 58, 66);
+$tertiary-color: rgb(245, 192, 7);
+$grey-color: rgb(221, 221, 221);
+
+$button-color: rgb(201, 27, 44);
+
+//allows me to subtract these values from the main image height
+$contact-bar-height: 45px;
+$navbar-height: 90px;
+$footer-height: 225px;
+
+// Problematic because it may change with additional content in the future
+
+// Sets the height of the inner content to 1vh-top and bottom bars .settings__innerContent {
+// uses interpolation https://sass-lang.com/documentation/interpolation
+.settings__innerContentHeight {
+  min-height: calc(
+    100vh - #{$contact-bar-height} - #{$navbar-height} - #{$footer-height}
+  );
+}
+
+$light-box-background: rgba(255, 255, 255, 0.8);
+
+$break-sm: 640px;
+$break-mm: 960px;
+$break-lg: 1024px;
+
+.settings__greyGradientBkgd {
+  background: linear-gradient(lightgrey 0%, white 20%);
+}
+
+.settings__test-border {
+  border: 1px solid red;
+}
+
+.settings__FH-NavContact {
+  min-height: calc(100vh - #{$navbar-height} - #{$contact-bar-height});
+  // min-height: 100vh;
+}
+
+.settings__featureImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.settings__inlineImage {
+  // width: 100vw;
+  width: 100%;
+}
+
+.settings__textHighlight {
+  color: $button-color;
+}
+
+.settings__textEmph {
+  color: $tertiary-color;
+}
+
+.settings__mainButton {
+  background-color: $button-color;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5em;
+  padding: 17px 12px 12px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+}
+
+.settings__mainButton:hover {
+  background-color: $light-box-background;
+  color: $button-color;
+  outline: 3px solid $button-color;
+  cursor: pointer;
+  box-sizing: border-box;
+  transform: scale(1.02);
+}
+
+.settings__link {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.settings__touchOnly {
+  display: none;
+}
+
+.settings__lgOnly {
+  display: inline;
+}
+
+@media screen and (max-width: $break-mm) {
+  .settings__touchOnly {
+    display: inline;
+  }
+
+  .settings__lgOnly {
+    display: none;
+  }
+
+  .settings__innerContentHeight {
+    min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+  }
+}

@@ -1,0 +1,40 @@
+.form {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 10px;
+
+  button {
+    margin-top: 15px;
+    background-color: black;
+    padding: 10px 7px 7px 7px;
+    font-size: 1em;
+  }
+
+  button:hover {
+    background-color: white;
+    color: black;
+    outline: 3px solid black;
+  }
+}
+
+.form__honeypot {
+  visibility: hidden;
+  height: 0;
+  // display: none;
+}
+
+.form__item {
+  display: grid;
+  row-gap: 5px;
+}
+
+// style the input fields
+.form__input {
+  // background-color: rgba(0, 0, 0, 0.15);
+  // border: none;
+  padding: 4px 4px 0 4px;
+}
+
+.form__required {
+  color: $secondary-color;
+}
