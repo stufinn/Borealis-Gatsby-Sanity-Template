@@ -9,7 +9,7 @@ import NavbarItem from "./NavbarItem"
 const NavBar = () => {
   const navbarData = useStaticQuery(graphql`
     query {
-      navLogoQuery: allFile(filter: { relativePath: { eq: "Logo.png" } }) {
+      navLogoQuery: allFile(filter: { relativePath: { eq: "Logo-bkgd.png" } }) {
         edges {
           node {
             childImageSharp {
@@ -24,7 +24,6 @@ const NavBar = () => {
 
       defaultLogoQuery: sanitySettings {
         logoImage {
-          altText
           asset {
             fluid {
               ...GatsbySanityImageFluid
@@ -34,6 +33,8 @@ const NavBar = () => {
       }
     }
   `)
+
+  console.log(navbarData)
 
   const logo = navbarData.defaultLogoQuery.logoImage.asset.fluid
   console.log("LOGO", navbarData.defaultLogoQuery.logoImage.asset.fluid)

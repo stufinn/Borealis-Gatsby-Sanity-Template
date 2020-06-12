@@ -104,12 +104,6 @@ const ServicePageTemplate = ({ data }) => {
           </div>
         </div>
         {/* Display More info container only if state of moreInfoView is True */}
-        {/* <Spring
-          from={{ opacity: 0, marginTop: -500 }}
-          to={{ opacity: 1, marginTop: 0 }}
-        >
-          {props => <div style={props}>Hello</div>}
-        </Spring> */}
 
         {transitions.map(
           ({ item, key, props }) =>
