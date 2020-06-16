@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 import "../styles/components/_layout.scss"
 
-import ContactBar from "./contactBar"
 import NavBar from "./navbar/navbar"
 import Footer from "./footer"
 
@@ -27,7 +26,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <ContactBar />
       {/* Header is given class because index uses custom a header */}
 
       <NavBar />
