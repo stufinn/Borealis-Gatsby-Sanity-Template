@@ -14,11 +14,6 @@ $footer-height: 225px;
 
 // Sets the height of the inner content to 1vh-top and bottom bars .settings__innerContent {
 // uses interpolation https://sass-lang.com/documentation/interpolation
-.settings__innerContentHeight {
-  min-height: calc(
-    100vh - #{$contact-bar-height} - #{$navbar-height} - #{$footer-height}
-  );
-}
 
 $light-box-background: rgba(255, 255, 255, 0.8);
 
@@ -100,9 +95,5 @@ $break-lg: 1024px;
 
   .settings__lgOnly {
     display: none;
-  }
-
-  .settings__innerContentHeight {
-    min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
   }
 }

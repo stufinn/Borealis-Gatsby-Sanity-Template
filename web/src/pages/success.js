@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 const SuccessPage = () => (
   <Layout>
     <SEO title="Success" />
-    <div className="success settings__innerContentHeight settings__greyGradientBkgd">
+    <div className="success  settings__greyGradientBkgd">
       <h1>Success!</h1>
       <p>
         Thanks for getting in touch,

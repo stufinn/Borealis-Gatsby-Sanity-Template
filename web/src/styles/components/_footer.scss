@@ -9,8 +9,6 @@ footer {
 .footer__top {
   display: grid;
   background-color: $button-color;
-  // grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
-  // grid-template-areas: ". address links placeholder .";
   grid-template-columns: 0.5fr auto repeat(2, 1fr) 0.5fr;
   column-gap: 15px;
   grid-template-areas: ". facebook address links .";

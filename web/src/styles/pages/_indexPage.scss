@@ -1,154 +1,12 @@
-// .indexPage__tagline {
-//   text-align: center;
-//   padding: 20px 20px 20px 20px;
-//   color: $primary-color;
-// }
-
 $sample-height: 200px;
-
-.indexPage__container {
-  min-height: calc(100vh - #{$navbar-height} - #{$contact-bar-height});
-}
-
-.indexPage__topContainer {
-  display: grid;
-  grid-template-rows: 100px 1fr 1fr 20px;
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-areas:
-    "top top top"
-    "left-spacer core right-spacer"
-    "left-spacer whatWeDo right-spacer"
-    "bottom bottom bottom";
-}
-
-.indexPage__topContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "tag-line contactForm";
-  column-gap: 150px;
-  grid-area: core;
-}
-
-.indexPage__tagLineContainer {
-  grid-area: tag-line;
-  background-color: $light-box-background;
-  text-align: right;
-  height: fit-content;
-}
-
-.indexPage__tagLine {
-  padding: 20px 20px;
-  margin: 0;
-  font-size: 3.75em;
-  // font-family: "Bebas Neue", cursive;
-}
-
-.indexPage__tagLineButtonContainer {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 60px;
-  font-size: 1.2em;
-}
 
 // NEW ADJUSTMENTS
 
-.indexPage__formOuterContainer {
-  background-color: $light-box-background;
-}
-
-.indexPage__formInnerContainer {
-  padding: 20px;
-
-  // Customize the form styles for the index page
-  .form__input {
-    background-color: rgba(0, 0, 0, 0.15);
-    border: none;
-  }
-
-  .form__button {
-    background-color: $primary-color;
-    margin-top: 20px;
-    font-size: 1.5em;
-    padding: 17px 12px 12px 12px;
-  }
-
-  .form__button:hover {
-    outline: 3px solid $primary-color;
-    color: $primary-color;
-  }
-}
-
-.indexPage__whatWeDo {
-  grid-area: whatWeDo;
-  margin-top: 50px;
-  color: white;
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  grid-template-areas:
-    "title"
-    "links";
-}
-
-.indexPage__whatWeDoTitle {
+.Title {
   display: flex;
   justify-content: center;
   // height: fit-content;
   color: white;
-}
-
-.indexPage__whatWeDoLinks {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.indexPage__serviceIcon {
-  width: 150px;
-  align-self: end;
-}
-
-.indexPage_serviceIconContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-
-.index__plusLink {
-  // display: flex;
-  // justify-content: center;
-  // justify-self: center;
-  // align-items: center;
-  // font-size: 2rem;
-  // color: $primary-color;
-  // border-radius: 50%;
-  // width: 40px;
-  // height: 40px;
-  // background-color: $tertiary-color;
-  // text-decoration: none;
-  width: fit-content;
-  max-width: 40px;
-  max-height: 40px;
-}
-
-.index__plusIconA {
-  display: block;
-  transition: transform 0.2s;
-}
-
-.index__plusIconA:hover {
-  transform: scale(1.3);
-}
-
-.index__plusIconB {
-  display: none;
-}
-// Bottom half of index page
-
-.indexPage__bottomContainer {
-  padding-bottom: 25px;
 }
 
 .indexPage__blogCardContainer {
@@ -158,11 +16,6 @@ $sample-height: 200px;
   row-gap: 20px;
 }
 
-// .indexPage__readMoreContainer {
-//   display: grid;
-//   justify-content: center;
-// }
-
 .index__readMoreButton {
   width: fit-content;
 }
@@ -170,67 +23,8 @@ $sample-height: 200px;
 // MEDIA QUERIES
 
 @media screen and (max-width: $break-mm) {
-  .indexPage__topContainer {
-    grid-template-rows: 100px 1fr;
-    grid-template-columns: 0.25fr 1fr 0.25fr;
-  }
-
-  .indexPage__topContent {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "tag-line";
-    column-gap: 0;
-    grid-area: core;
-  }
-
-  .indexPage__tagLine {
-    text-align: center;
-    font-size: 3.5em;
-  }
-
-  .indexPage__tagLineButtonContainer {
-    display: none;
-    // display: flex;
-    // justify-content: center;
-    // width: 100%;
-  }
-  .indexPage__whatWeDo {
-    grid-template-rows: auto auto;
-  }
-
-  .indexPage__whatWeDoLinks {
-    margin-top: 30px;
-    grid-template-columns: 1fr;
-    row-gap: 50px;
-  }
-
-  .indexPage__formOuterContainer {
-    display: none;
-  }
-
-  .indexPage__serviceIcon {
-    width: 150px;
-  }
-
-  .indexPage_serviceIconContainer {
-    grid-template-rows: auto;
-  }
-
   .index__readMoreButton {
     width: 100%;
     text-align: center;
   }
 }
-
-@media screen and (max-width: $break-sm) {
-  .indexPage__topContainer {
-    grid-template-columns: 0.03fr 1fr 0.03fr;
-  }
-}
-
-// @media screen and (max-width: $break-mm) {
-//   .indexPage__tagLine {
-//     font-size: 3em;
-//   }
-// }

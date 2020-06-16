@@ -185,23 +185,13 @@
     z-index: 5;
   }
 
-  .navbar__getQuoteContainer {
-    display: flex;
-  }
-
   .navbar__logo {
     display: none;
   }
 
   .navbar__mobileLogo {
     display: block;
-    // position: relative;
   }
-
-  // .navbar__divider {
-  //   height: 2px;
-  //   width: 100%;
-  // }
 }
 
 // Media Query for medium screens - 768px

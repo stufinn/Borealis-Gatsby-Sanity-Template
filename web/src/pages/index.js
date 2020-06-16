@@ -41,7 +41,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="indexPage__container">Hello from the home page</div>
+      <div>Hello from the home page</div>
     </Layout>
   )
 }
