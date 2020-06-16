@@ -6,7 +6,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import pages from './documents/pages';
 import homePage from './documents/homePage';
 import settings from './documents/settings';
-import headerImage from './headerImage';
 import miscImage from './miscImage';
 import inlineImage from './inlineImage';
 import serviceIcon from './serviceIcon';
@@ -23,10 +22,9 @@ export default createSchema({
     blogPost,
     pages,
     homePage,
-    headerImage,
     miscImage,
     inlineImage,
     serviceIcon,
-    settings
-  ])
+    settings,
+  ]),
 });

@@ -33,7 +33,6 @@ const serializer = {
 const BlogPostTemplate = ({ data }) => {
   const createdAtDate = data.sanityBlogPost._createdAt
   const rawPostContent = data.sanityBlogPost._rawPostContent
-  const headerImage = data.sanitySettings.blogHeaderImage
   const publishedDate = data.sanityBlogPost.publishedDate || null
 
   // only assign if the data exists
@@ -42,7 +41,7 @@ const BlogPostTemplate = ({ data }) => {
     : null
 
   return (
-    <Layout headerImage={headerImage ? headerImage.asset : null}>
+    <Layout>
       <SEO title={`${data.sanityBlogPost.title}`} />
       <div className="blogPost settings__greyGradientBkgd">
         <div className="blogPost__container">
@@ -88,15 +87,6 @@ export const query = graphql`
       featureImage {
         asset {
           fluid {
-            ...GatsbySanityImageFluid
-          }
-        }
-      }
-    }
-    sanitySettings {
-      blogHeaderImage {
-        asset {
-          fluid(maxWidth: 600, maxHeight: 500) {
             ...GatsbySanityImageFluid
           }
         }

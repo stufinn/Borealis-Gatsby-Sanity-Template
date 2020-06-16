@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 
 import BlogCard from "../components/blog/BlogCard"
 import Layout from "../components/layout"
@@ -9,8 +8,6 @@ import SEO from "../components/seo"
 const BlogPage = ({ data }) => {
   const blogPosts = data.allSanityBlogPost.edges
   console.log(data)
-  // const headerImage = data.sanitySettings.blogHeaderImage
-  const headerImage = null
 
   const [postCount, setpostCount] = useState(3)
 
@@ -30,7 +27,7 @@ const BlogPage = ({ data }) => {
   }
 
   return (
-    <Layout headerImage={headerImage ? headerImage.asset : null}>
+    <Layout>
       <SEO title="Updates" />
       <div>
         <div
@@ -102,15 +99,6 @@ export const query = graphql`
       }
     }
 
-    sanitySettings {
-      blogHeaderImage {
-        asset {
-          fluid(maxWidth: 600, maxHeight: 500) {
-            ...GatsbySanityImageFluid
-          }
-        }
-      }
-    }
     backgroundImage: allFile(
       filter: { relativePath: { eq: "indexBackground.jpg" } }
     ) {

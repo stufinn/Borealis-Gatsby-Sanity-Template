@@ -11,12 +11,11 @@ import SEO from "../components/seo"
 
 const ContactPage = ({ data }) => {
   // custom header from Sanity. If none provided, this will be null
-  const headerImage = null
   const fluid = data.mapQuery.edges[0].node.childImageSharp.fluid
 
   return (
     //pass custom header to Layout
-    <Layout headerImage={headerImage ? headerImage.asset : null}>
+    <Layout>
       {/* <SEO title={`${data.sanityContactPage.title}`} /> */}
       <div className="contactPage settings__greyGradientBkgd">
         <h1 style={{ textAlign: "center" }}>Title Here</h1>

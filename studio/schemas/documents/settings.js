@@ -10,12 +10,6 @@ export default {
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
-
-    {
-      name: 'blogHeaderImage',
-      title: 'Default header image for "Updates"',
-      type: 'headerImage',
-    },
     {
       name: 'logoImage',
       title: 'Default logo for navbar',

@@ -14,7 +14,7 @@ import ContactBar from "./contactBar"
 import NavBar from "./navbar/navbar"
 import Footer from "./footer"
 
-const Layout = ({ children, headerImage = null }) => {
+const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteQuery {
   //     site {
@@ -29,11 +29,7 @@ const Layout = ({ children, headerImage = null }) => {
     <>
       <ContactBar />
       {/* Header is given class because index uses custom a header */}
-      {/* <Header
-        className="layout__header"
-        siteTitle={data.site.siteMetadata.title}
-        headerImage={headerImage}
-      /> */}
+
       <NavBar />
       {/* <div className="layout__main__wrapper"> */}
       <main className="layout__main">{children}</main>
