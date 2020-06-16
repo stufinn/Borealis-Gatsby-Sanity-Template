@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { MdMenu, MdClose } from "react-icons/md"
-import { GoPencil } from "react-icons/go"
 import NavbarItem from "./NavbarItem"
 
 const NavBar = () => {
@@ -104,16 +103,6 @@ const NavBar = () => {
           }`}
           onClick={toggleBurger}
         />
-        <Link
-          to="/contact"
-          className="navbar__getQuoteContainer settings__link"
-        >
-          <span>
-            Get a<br />
-            Quote
-          </span>
-          <GoPencil className="navbar__getQuotePencil" />
-        </Link>
       </div>
       {/* navbar logo */}
       <div className="navbar__logoContainer">

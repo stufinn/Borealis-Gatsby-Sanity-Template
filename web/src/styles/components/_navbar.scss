@@ -32,22 +32,6 @@
   cursor: pointer;
 }
 
-.navbar__getQuoteContainer {
-  // color: green;
-  display: none;
-  align-items: center;
-  font-size: 0.5em;
-  line-height: normal;
-  margin-right: 20px;
-  color: $secondary-color;
-  z-index: 4;
-}
-
-.navbar__getQuotePencil {
-  margin-left: 10px;
-  font-size: 25px;
-}
-
 .navbar__dividerContainer {
   display: flex;
   align-items: center;
