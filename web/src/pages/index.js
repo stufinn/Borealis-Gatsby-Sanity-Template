@@ -8,7 +8,16 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div>Hello from the home page</div>
+      <div
+        style={{
+          minHeight: 500,
+          display: "grid",
+          alignContent: "center",
+          justifyContent: "center",
+        }}
+      >
+        Hello from the home page
+      </div>
     </Layout>
   )
 }
