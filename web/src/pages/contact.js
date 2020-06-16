@@ -26,8 +26,8 @@ const ContactPage = ({ data }) => {
               <div className="contactPage__number">
                 <h3 style={{ marginBottom: 5 }}>Phone</h3>
                 <div style={{ lineHeight: "1.2em" }}>
-                  <div>Calgary: (403) 992-7805</div>{" "}
-                  <div>Cochrane: (403) 701-5557</div>
+                  <div>Sioux Lookout: (555) 555-5555</div>{" "}
+                  <div>Toronto: (416) 555-5555</div>
                 </div>
               </div>
             </div>

@@ -43,7 +43,7 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={`${data.sanityBlogPost.title}`} />
-      <div className="blogPost settings__greyGradientBkgd">
+      <div className="blogPost">
         <div className="blogPost__container">
           <div className="blogPost__topContent">
             <h1 className="blogPost__title">{data.sanityBlogPost.title}</h1>

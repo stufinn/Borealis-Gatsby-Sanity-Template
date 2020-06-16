@@ -1,7 +1,5 @@
 .blogCard {
   background-color: $light-box-background;
-  // width: fit-content;
-  // display: flex;
   display: grid;
   grid: 1fr / minmax(150px, 450px) auto;
   column-gap: 20px;
