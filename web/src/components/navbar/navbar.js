@@ -35,9 +35,11 @@ const NavBar = () => {
 
   console.log(navbarData)
 
-  const logo = navbarData.defaultLogoQuery.logoImage.asset.fluid
-  console.log("LOGO", navbarData.defaultLogoQuery.logoImage.asset.fluid)
-  const mobileLogo = navbarData.defaultLogoQuery.logoImage.asset.fluid
+  const logo = navbarData.defaultLogoQuery
+    ? navbarData.defaultLogoQuery.logoImage.asset.fluid
+    : navbarData.navLogoQuery.edges[0].node.childImageSharp.fluid
+  console.log("LOGO", logo)
+  const mobileLogo = logo
 
   const navLinks = [
     {
