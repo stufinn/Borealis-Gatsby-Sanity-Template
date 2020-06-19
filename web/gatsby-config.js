@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "ae5vsv43",
+        projectId: "8n88jtx1",
         dataset: "production",
         // a token with read permissions is required
         // if you have a private dataset
