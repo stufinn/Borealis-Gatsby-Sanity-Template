@@ -1,7 +1,10 @@
+import { FaRegNewspaper } from 'react-icons/fa';
+
 export default {
   name: 'blogPost',
-  title: 'Updates',
+  title: 'Blog Posts',
   type: 'document',
+  icon: FaRegNewspaper,
   fields: [
     {
       name: 'title',
