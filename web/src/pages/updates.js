@@ -12,7 +12,6 @@ const BlogPage = ({ data }) => {
   const [postCount, setpostCount] = useState(3)
 
   let displayBlogPosts = blogPosts.slice(0, postCount)
-  // console.log("Alt:", altBlogPosts)
 
   // const backgroundImage =
   //   data.backgroundImage.edges[0].node.childImageSharp.fluid
