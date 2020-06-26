@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
+
+/* custom css can go here. Compiled via "watch" or "tailwind" scripts */
+
 @tailwind utilities;
