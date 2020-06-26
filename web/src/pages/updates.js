@@ -30,7 +30,8 @@ const BlogPage = ({ data }) => {
       <SEO title="Updates" />
       <div>
         <div
-          className="blog__contentContainer"
+          // className="blog__contentContainer"
+          className="flex items-center flex-col pt-20"
           style={{ paddingBottom: "25px" }}
         >
           <h1 className="blog__title">

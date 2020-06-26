@@ -47,6 +47,7 @@ module.exports = {
         fonts: [{ family: `Bebas Neue` }],
       },
     },
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
