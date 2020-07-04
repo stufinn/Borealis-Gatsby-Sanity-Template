@@ -26,13 +26,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {/* Header is given class because index uses custom a header */}
-
       <NavBar />
-      {/* <div className="layout__main__wrapper"> */}
       <main className="layout__main">{children}</main>
       <Footer />
-      {/* </div> */}
     </>
   )
 }
