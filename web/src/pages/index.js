@@ -15,6 +15,7 @@ const IndexPage = () => {
           alignContent: "center",
           justifyContent: "center",
         }}
+        className="text-red-700 font-bold"
       >
         Hello from the home page
       </div>

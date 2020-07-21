@@ -36,7 +36,10 @@ export default ({
   fluid = fluid ? fluid : defaultBlogImage
 
   return (
-    <div className="blogCard">
+    <div
+      // className="blogCard"
+      className="grid grid-cols-card col-gap-5"
+    >
       <div style={{ padding: 15 }}>
         <Img className="blogCard__image" fluid={fluid} />
       </div>
