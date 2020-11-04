@@ -40,7 +40,6 @@ module.exports = {
         icon: `src/images/Logo-bkgd.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
