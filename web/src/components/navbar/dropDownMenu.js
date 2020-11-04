@@ -9,7 +9,7 @@ const DropDownLink = ({ children, handle, dropdownWrap = false }) => {
     // whitespace nowrap prevents text-wrapping
 
     <Link
-      className={`hover:bg-blue-light hover:text-white text-black text-lg p-3 border-t first:border-t-0  border-gray-dark first:border-b-0 bg-white ${!dropdownWrap &&
+      className={`hover:bg-blue-light hover:text-green-300 text-black text-lg p-3 border-t first:border-t-0  border-gray-dark first:border-b-0 bg-white ${!dropdownWrap &&
         "whitespace-no-wrap"} `}
       to={handle}
       activeClassName="text-blue-dark"
