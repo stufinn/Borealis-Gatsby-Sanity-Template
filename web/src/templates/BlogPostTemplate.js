@@ -13,8 +13,8 @@ import FeatureImage from "../components/FeatureImage"
 
 const urlFor = source =>
   urlBuilder({
-    projectId: "ij3w87az",
-    dataset: "production",
+    projectId: process.env.SANITY_ID,
+    dataset: process.env.SANITY_DATASET,
   }).image(source)
 
 const serializer = {
