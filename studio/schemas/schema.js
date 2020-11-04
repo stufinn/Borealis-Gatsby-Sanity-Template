@@ -3,7 +3,7 @@ import createSchema from 'part:@sanity/base/schema-creator';
 
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type';
-import pages from './documents/pages';
+import customPage from './documents/customPage';
 import homePage from './documents/homePage';
 import settings from './documents/settings';
 import miscImage from './miscImage';
@@ -20,7 +20,7 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     blogPost,
-    pages,
+    customPage,
     homePage,
     miscImage,
     inlineImage,

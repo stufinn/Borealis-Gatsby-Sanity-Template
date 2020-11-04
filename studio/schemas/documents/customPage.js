@@ -1,7 +1,7 @@
 import { RiPagesLine } from 'react-icons/ri';
 
 export default {
-  name: 'pages',
+  name: 'customPage',
   type: 'document',
   title: 'Custom Pages',
   icon: RiPagesLine,
