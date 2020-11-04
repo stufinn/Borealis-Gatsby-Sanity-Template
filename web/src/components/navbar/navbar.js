@@ -11,6 +11,16 @@ const NavGridContainer = ({ children }) => (
 const NavBar = () => {
   const data = useStaticQuery(graphql`
     query {
+      sanityLogo: sanitySettings {
+        logoImage {
+          asset {
+            fluid(maxHeight: 200) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+
       defaultNavLogo: file(relativePath: { eq: "defaultLogo.png" }) {
         childImageSharp {
           fluid(maxHeight: 200) {
@@ -21,10 +31,14 @@ const NavBar = () => {
     }
   `)
 
-  const { defaultNavLogo } = data
+  const { defaultNavLogo, sanityLogo } = data
 
-  // defa
-  const navLogo = defaultNavLogo.childImageSharp
+  console.log(sanityLogo)
+
+  // modify this to accept logo from sanity
+  const navLogo = sanityLogo
+    ? sanityLogo.logoImage.asset
+    : defaultNavLogo.childImageSharp
 
   const navLinks = [
     {
