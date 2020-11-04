@@ -10,6 +10,11 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    borderWidth: ["responsive", "first"],
+    display: ["responsive", "hover", "group-hover"],
+    textColor: ["responsive", "hover", "focus", "group-hover", "visited"],
+    backgroundColor: ["responsive", "hover", "focus", "group-hover"],
+  },
   plugins: [],
 }

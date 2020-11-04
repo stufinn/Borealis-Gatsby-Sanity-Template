@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import DropdownMenu from "./dropdownMenu"
+import DropdownMenu from "./dropDownMenu"
 
 // default to empty strings because I may use it for other purposes (that don't use these props)
 const NavbarItem = ({
@@ -17,7 +17,7 @@ const NavbarItem = ({
     // "group" allows for child elements to be affected by hover over a parent element
     // https://tailwindcss.com/docs/pseudo-class-variants#group-hover
     // https://tailwindcss.com/docs/configuring-variants
-    <div className="group relative inline-block h-full">
+    <div className=" group relative inline-block h-full">
       {/* If no handle is provided, render a visually identical non-link item. Empty string is OK (i.e. Index Page) */}
       {handle != null ? (
         <Link
