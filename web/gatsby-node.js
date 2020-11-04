@@ -8,33 +8,33 @@ const path = require("path")
 
 // async function that accepts and object
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-  const pages = await graphql(`
-    {
-      allSanityPages {
-        edges {
-          node {
-            id
-            slug {
-              current
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const pages = await graphql(`
+  //   {
+  //     allSanityPages {
+  //       edges {
+  //         node {
+  //           id
+  //           slug {
+  //             current
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  // The above will grab all of our pages on startup, based on this query
+  // // The above will grab all of our pages on startup, based on this query
 
-  pages.data.allSanityPages.edges.forEach(edge => {
-    createPage({
-      path: edge.node.slug.current,
-      component: path.resolve("./src/templates/ServicePageTemplate.js"),
-      context: {
-        id: edge.node.id,
-        slug: edge.node.slug.current,
-      },
-    })
-  })
+  // pages.data.allSanityPages.edges.forEach(edge => {
+  //   createPage({
+  //     path: edge.node.slug.current,
+  //     component: path.resolve("./src/templates/ServicePageTemplate.js"),
+  //     context: {
+  //       id: edge.node.id,
+  //       slug: edge.node.slug.current,
+  //     },
+  //   })
+  // })
 
   const blogposts = await graphql(`
     {
