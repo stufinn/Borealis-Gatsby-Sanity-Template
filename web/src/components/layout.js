@@ -14,20 +14,10 @@ import NavBar from "./navbar/navbar"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
       <NavBar />
-      <main className="layout__main">{children}</main>
+      <main className="">{children}</main>
       <Footer />
     </>
   )
