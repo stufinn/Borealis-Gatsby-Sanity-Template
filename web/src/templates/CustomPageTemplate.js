@@ -8,7 +8,9 @@ const CustomPageTemplate = ({ data }) => {
   return (
     <Layout>
       This is a custom page! The title is: {title}
-      <BlockContentPrimary blockData={rawMainContent} />
+      <section className="mt-10 w-full">
+        <BlockContentPrimary blockData={rawMainContent} />
+      </section>
     </Layout>
   )
 }
