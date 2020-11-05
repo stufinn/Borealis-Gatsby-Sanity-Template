@@ -2,5 +2,12 @@
 @tailwind components;
 
 /* custom css can go here. Compiled via "watch" or "tailwind" scripts */
+h1 {
+  @apply text-6xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
 
 @tailwind utilities;
