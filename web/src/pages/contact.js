@@ -16,7 +16,7 @@ const ContactPage = ({ data }) => {
   return (
     //pass custom header to Layout
     <Layout>
-      {/* <SEO title={`${data.sanityContactPage.title}`} /> */}
+      <SEO title="Contact" />
       <div className="contactPage settings__greyGradientBkgd">
         <h1 style={{ textAlign: "center" }}>Title Here</h1>
         <div className="contactPage__content">
