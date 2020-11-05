@@ -10,6 +10,8 @@ import miscImage from './miscImage';
 import inlineImage from './inlineImage';
 import serviceIcon from './serviceIcon';
 import blogPost from './documents/blogPost';
+import files from './files';
+import blockContent from './blockContent';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,5 +28,7 @@ export default createSchema({
     inlineImage,
     serviceIcon,
     settings,
+    files,
+    blockContent,
   ]),
 });

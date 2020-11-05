@@ -7,6 +7,11 @@ export default {
   icon: RiPagesLine,
   fields: [
     {
+      name: 'includeInMenu',
+      title: 'Add to menu bar?',
+      type: 'boolean',
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Title',
@@ -32,12 +37,15 @@ export default {
       validation: (Rule) => Rule.min(20).max(300),
     },
     {
-      title: 'More Info',
+      title: 'Main Content',
       name: 'mainContent',
-      type: 'array',
-      of: [{ type: 'block' }, { type: 'inlineImage' }],
-      description: 'Text content for the hidden "More Info" section',
-      validation: (Rule) => Rule.required(),
+      type: 'blockContent',
+    },
+    {
+      name: 'files',
+      type: 'files',
+      description:
+        'Upload files.  Accepted file formats include images, MS word documents and PDf files.',
     },
     {
       title: 'Feature Image',
