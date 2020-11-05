@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <NavBar />
-      <main className="">{children}</main>
+      <main className="grid justify-center py-8">{children}</main>
       <Footer />
     </>
   )
