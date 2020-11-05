@@ -28,18 +28,43 @@ const NavBar = () => {
           }
         }
       }
+
+      customPages: allSanityCustomPage(
+        filter: { includeInMenu: { eq: true } }
+      ) {
+        edges {
+          node {
+            id
+            title
+            slug {
+              current
+            }
+          }
+        }
+      }
     }
   `)
 
-  const { defaultNavLogo, sanityLogo } = data
+  const { defaultNavLogo, sanityLogo, customPages } = data
 
-  console.log(sanityLogo)
+  const customPageArray = customPages.edges
+
+  const customPageLinks = customPageArray.map(({ node: customPage }) => {
+    return {
+      name: customPage.title,
+      handle: `/page/${customPage.slug.current}`,
+      key: `${customPage.id}-${customPage.slug.current}`,
+    }
+  })
+
+  console.log(customPageLinks)
 
   // modify this to accept logo from sanity
   const navLogo = sanityLogo
     ? sanityLogo.logoImage.asset
     : defaultNavLogo.childImageSharp
 
+  // These are links for the mobile menu
   const navLinks = [
     {
       name: "Home",
@@ -72,7 +97,21 @@ const NavBar = () => {
       handle: "media",
       key: "media",
     },
-  ]
+  ].concat(customPageLinks)
+
+  // Links for the "More" menu
+  const moreLinks = [
+    { name: "News", handle: "/news", key: "news" },
+
+    { name: "Calendar", handle: "/calendar", key: "calendar" },
+    {
+      name: "Media",
+      handle: "/media",
+      key: "media",
+    },
+    { name: "About Page", handle: "/about", key: "aboutPageLink" },
+    { name: "Google", url: "https://www.google.ca", key: "googlePageLink" },
+  ].concat(customPageLinks)
 
   return (
     <nav>
@@ -83,7 +122,7 @@ const NavBar = () => {
         <NavbarItem handle="" name="Home" />
         <NavbarItem handle="about" name="About" />
         <NavbarItem handle="contact" name="Contact" />
-        <NavbarItem name="More" dropdown={[{ name: "One", handle: "#" }]} />
+        <NavbarItem name="More" dropdown={moreLinks} />
       </NavGridContainer>
     </nav>
   )
