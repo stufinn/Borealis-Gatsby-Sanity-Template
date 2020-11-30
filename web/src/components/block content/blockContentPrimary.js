@@ -18,7 +18,10 @@ const BlockContentPrimary = ({ blockData }) => {
   // console.log("blockData")
   // console.log(blockData)
   const urlFor = source =>
-    urlBuilder({ projectId: "ij3w87az", dataset: "production" }).image(source)
+    urlBuilder({
+      projectId: process.env.SANITY_ID,
+      dataset: "production",
+    }).image(source)
   //   Serializer is used to tell component how to render Portable Text
   //   if no serializer is used, a default serializer is used under-the hood
   //   This allows us to customize how modify defaults and render custom formats
