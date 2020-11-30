@@ -11,7 +11,7 @@ const Media = ({ data }) => {
       {/* List or grid of albums */}
       {allSanityAlbums.edges.map(({ node: album }) => (
         <div>
-          <Link to={`/media/${album.slug.current}`}>{album.title}</Link>
+          <Link to={`/albums/${album.slug.current}`}>{album.title}</Link>
         </div>
       ))}
     </Layout>
