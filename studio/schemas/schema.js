@@ -12,6 +12,8 @@ import serviceIcon from './serviceIcon';
 import blogPost from './documents/blogPost';
 import files from './files';
 import blockContent from './blockContent';
+import albumImage from './albumImage';
+import albums from './documents/albums';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,5 +32,7 @@ export default createSchema({
     settings,
     files,
     blockContent,
+    albumImage,
+    albums,
   ]),
 });
