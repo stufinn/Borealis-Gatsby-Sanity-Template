@@ -7,7 +7,7 @@ import { FaPhone, FaStoreAlt } from "react-icons/fa"
 
 import ContactForm from "../components/contactForm"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 
 const ContactPage = ({ data }) => {
   // custom header from Sanity. If none provided, this will be null

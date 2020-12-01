@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import BlogCard from "../components/blog/BlogCard"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 
 const BlogPage = ({ data }) => {
   const blogPosts = data.allSanityBlogPost.edges

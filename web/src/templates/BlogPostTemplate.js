@@ -6,7 +6,7 @@ import urlBuilder from "@sanity/image-url"
 import Moment from "react-moment"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 import FeatureImage from "../components/FeatureImage"
 
 // TO DO: Add rich text content!
