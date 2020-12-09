@@ -8,6 +8,9 @@ module.exports = {
       gridTemplateColumns: {
         card: "minmax(150px, 450px) auto",
       },
+      boxShadow: {
+        extra: "8px 8px 0 0 green",
+      },
     },
   },
   variants: {
