@@ -14,7 +14,7 @@ const Media = ({ data }) => {
         {/* List or grid of albums */}
         <h2>Albums</h2>
 
-        <div className="flex gap-x-10 justify-center flex-wrap ">
+        <div className="flex gap-x-10 gap-y-10 justify-center flex-wrap mt-10 ">
           {(allSanityAlbums.edges.length > 0 &&
             allSanityAlbums.edges.map(({ node: album }) => {
               {
@@ -28,9 +28,13 @@ const Media = ({ data }) => {
                 /* Add opaque box shadow https://tailwindcss.com/docs/box-shadow */
               }
 
+              {
+                /* tailwind hover transition adapted from Tailwind docs: https://tailwindcss.com/docs/transition-property  */
+              }
+
               return (
                 <Link
-                  className="w-64 h-64 shadow-extra transform hover:scale-110 "
+                  className="w-64 h-64 shadow-extra transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105"
                   to={`/albums/${album.slug.current}`}
                   title={`${album.title} album`}
                 >
