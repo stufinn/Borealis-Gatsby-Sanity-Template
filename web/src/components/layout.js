@@ -13,11 +13,13 @@ import PropTypes from "prop-types"
 import NavBar from "./navbar/navbar"
 import Footer from "./footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, className }) => {
   return (
     <>
       <NavBar />
-      <main className="grid justify-center py-8">{children}</main>
+      <main className={`grid justify-center py-8 ${className}`}>
+        {children}
+      </main>
       <Footer />
     </>
   )
