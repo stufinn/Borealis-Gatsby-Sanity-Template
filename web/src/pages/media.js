@@ -12,7 +12,7 @@ const Media = ({ data }) => {
       <h1>Media</h1>
       {/* List or grid of albums */}
       <h2>Albums</h2>
-      <div className="flex col-gap-10 justify-center flex-wrap">
+      <div className="flex gap-x-10 justify-center flex-wrap ">
         {(allSanityAlbums.edges.length > 0 &&
           allSanityAlbums.edges.map(({ node: album }) => {
             {
@@ -28,7 +28,7 @@ const Media = ({ data }) => {
 
             return (
               <Link
-                className="w-64 shadow-extra"
+                className="w-64 shadow-extra transform hover:scale-125 "
                 to={`/albums/${album.slug.current}`}
                 title={`${album.title} album`}
               >
