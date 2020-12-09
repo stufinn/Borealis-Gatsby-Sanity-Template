@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../../components/layout"
 import ImageGallery from "react-image-gallery"
@@ -36,11 +36,17 @@ const Album = ({ data }) => {
   })
   debugger
   return (
-    <Layout className="text-center">
+    <Layout className="text-center justify-items-center">
       <h1>{title}</h1>
       <div className="my-10 mx-5">
         <ImageGallery items={imageUrlArray} thumbnailPosition="top" />
       </div>
+      <Link
+        to="/media"
+        className="bg-green-600  hover:bg-white text-white font-semibold hover:text-green-500 py-2 px-8 border border-blue hover:border-green-500 rounded text-2xl uppercase"
+      >
+        All Albums
+      </Link>
     </Layout>
   )
 }
