@@ -9,40 +9,43 @@ const Media = ({ data }) => {
 
   return (
     <Layout className="mx-10 text-center">
-      <h1>Media</h1>
-      {/* List or grid of albums */}
-      <h2>Albums</h2>
-      <div className="flex gap-x-10 justify-center flex-wrap ">
-        {(allSanityAlbums.edges.length > 0 &&
-          allSanityAlbums.edges.map(({ node: album }) => {
-            {
-              /* Use  albumCover if provided in CMS, or use first image in array as cover */
-            }
-            const albumCover = album.albumCover
-              ? album.albumCover.asset.fluid
-              : album.albumImages[0].asset.fluid
+      <section className=" grid">
+        <h1>Media</h1>
+        {/* List or grid of albums */}
+        <h2>Albums</h2>
 
-            {
-              /* Add opaque box shadow https://tailwindcss.com/docs/box-shadow */
-            }
+        <div className="flex gap-x-10 justify-center flex-wrap ">
+          {(allSanityAlbums.edges.length > 0 &&
+            allSanityAlbums.edges.map(({ node: album }) => {
+              {
+                /* Use  albumCover if provided in CMS, or use first image in array as cover */
+              }
+              const albumCover = album.albumCover
+                ? album.albumCover.asset.fluid
+                : album.albumImages[0].asset.fluid
 
-            return (
-              <Link
-                className="w-64 shadow-extra transform hover:scale-125 "
-                to={`/albums/${album.slug.current}`}
-                title={`${album.title} album`}
-              >
-                <Img
-                  fluid={{
-                    ...albumCover,
-                    aspectRatio: 1 / 1,
-                  }}
-                  alt={album.title}
-                />
-              </Link>
-            )
-          })) || <div>No albums yet. Check back soon!</div>}
-      </div>
+              {
+                /* Add opaque box shadow https://tailwindcss.com/docs/box-shadow */
+              }
+
+              return (
+                <Link
+                  className="w-64 h-64 shadow-extra transform hover:scale-110 "
+                  to={`/albums/${album.slug.current}`}
+                  title={`${album.title} album`}
+                >
+                  <Img
+                    fluid={{
+                      ...albumCover,
+                      aspectRatio: 1 / 1,
+                    }}
+                    alt={album.title}
+                  />
+                </Link>
+              )
+            })) || <div>No albums yet. Check back soon!</div>}
+        </div>
+      </section>
     </Layout>
   )
 }
