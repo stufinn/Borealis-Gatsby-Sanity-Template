@@ -41,5 +41,12 @@ export default {
         },
       ],
     },
+    {
+      name: 'albumCover',
+      type: 'image',
+      title: 'Album Cover Image',
+      description:
+        'Optional: Provide/Specify an Album cover image. If one is not provided, the first image in the album is used as the album cover.',
+    },
   ],
 };
