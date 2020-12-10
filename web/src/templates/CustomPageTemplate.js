@@ -2,6 +2,7 @@ import React from "react"
 import BlockContentPrimary from "../components/block content/blockContentPrimary"
 import Layout from "../components/layout"
 import SEO from "../components/SEO"
+import { graphql } from "gatsby"
 
 const CustomPageTemplate = ({ data }) => {
   const { title, _rawMainContent: rawMainContent } = data.sanityCustomPage
