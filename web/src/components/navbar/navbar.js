@@ -83,9 +83,9 @@ const NavBar = () => {
     },
 
     {
-      name: "News",
-      handle: "news",
-      key: "news",
+      name: "Updates",
+      handle: "updates",
+      key: "updates",
     },
     {
       name: "Calendar",
@@ -101,7 +101,7 @@ const NavBar = () => {
 
   // Links for the "More" menu
   const moreLinks = [
-    { name: "News", handle: "/news", key: "news" },
+    { name: "Updates", handle: "/updates", key: "updates" },
 
     { name: "Calendar", handle: "/calendar", key: "calendar" },
     {
