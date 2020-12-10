@@ -8,7 +8,6 @@ import homePage from './documents/homePage';
 import settings from './documents/settings';
 import miscImage from './miscImage';
 import inlineImage from './inlineImage';
-import serviceIcon from './serviceIcon';
 import blogPost from './documents/blogPost';
 import files from './files';
 import blockContent from './blockContent';
@@ -28,7 +27,6 @@ export default createSchema({
     homePage,
     miscImage,
     inlineImage,
-    serviceIcon,
     settings,
     files,
     blockContent,
