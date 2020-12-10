@@ -43,15 +43,15 @@ export default ({
       <div style={{ padding: 15 }}>
         <Img className="blogCard__image" fluid={fluid} />
       </div>
-      <div className="blogCard__content">
-        <h3 className="blogCard__title">{title}</h3>
-        {date ? <div className="blogCard__date">Published: {date}</div> : null}
-        <p className="blogCard__text">{text}</p>
+      <div className="grid items-start">
+        <h2 className="">{title}</h2>
+        {date ? <div className="">Published: {date}</div> : null}
+        <p className="">{text}</p>
 
         <ButtonLink
           url={`/updates/${handle}`}
           text="Continue Reading"
-          classNames="indexPage__buttonLink"
+          classNames="bg-green-600  hover:bg-white text-white font-semibold hover:text-green-500 py-2 px-8 border border-blue hover:border-green-500 rounded text-2xl uppercase"
         />
       </div>
     </div>
