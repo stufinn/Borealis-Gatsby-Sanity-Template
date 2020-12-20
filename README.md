@@ -28,6 +28,7 @@ Whenever a change is made in the sanity studio, in order for that new data to be
 ### To add Notes about
 
 - sanity cli installation
+- include a .env file in /web with SANITY_TOKEN, SANITY_ID, and SANITY_DATASET
 
 ## Additional Notes
 
