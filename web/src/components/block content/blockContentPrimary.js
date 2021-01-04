@@ -71,23 +71,15 @@ const BlockContentPrimary = ({ blockData }) => {
         const fluidProps = getFluidGatsbyImage(sanityImageId, {maxWidth:1000}, sanityConfig)
         return (
           <>
-            <div className="flex w-1/2 justify-center">
-              <Img fluid={fluidProps} className=" w-1/2"/>
+            <div className="w-full lg:w-3/4 max-w-3xl">
+              <Img fluid={fluidProps} className=""/>
 
-              {/* <div>
-                <img
-                  // src={urlFor(props.node.image).url()}
-                  // Above src wasn't actually accessing the photo correctly,
-                  // not sure if it was in the past so I left it commented out.
-                  src={props.node.asset.url}
-                  alt={props.node.alt}
-                />
                 {props.node.caption && (
                   <figcaption className="font-bold text-2xl text-center mt-3">
                     {props.node.caption}
                   </figcaption>
                 )}
-              </div> */}
+
             </div>
           </>
         )
