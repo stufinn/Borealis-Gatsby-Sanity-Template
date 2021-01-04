@@ -2,6 +2,10 @@ import React from "react"
 import PortableText from "@sanity/block-content-to-react"
 import { Link } from "gatsby"
 import urlBuilder from "@sanity/image-url"
+import {getFluidGatsbyImage} from 'gatsby-source-sanity'
+import Img from 'gatsby-image'
+
+import {sanityConfig} from "../../sanityConfig"
 
 const InternalLink = ({ linkProps, preSlug }) => (
   <span>
@@ -17,11 +21,11 @@ const InternalLink = ({ linkProps, preSlug }) => (
 const BlockContentPrimary = ({ blockData }) => {
   // console.log("blockData")
   // console.log(blockData)
-  const urlFor = source =>
-    urlBuilder({
-      projectId: process.env.SANITY_ID,
-      dataset: "production",
-    }).image(source)
+  // const urlFor = source =>
+  //   urlBuilder({
+  //     projectId: process.env.GATSBY_SANITY_ID,
+  //     dataset: "production",
+  //   }).image(source)
   //   Serializer is used to tell component how to render Portable Text
   //   if no serializer is used, a default serializer is used under-the hood
   //   This allows us to customize how modify defaults and render custom formats
@@ -63,10 +67,14 @@ const BlockContentPrimary = ({ blockData }) => {
     },
     types: {
       inlineImage: props => {
+        const sanityImageId = props.node.asset.id
+        const fluidProps = getFluidGatsbyImage(sanityImageId, {maxWidth:1000}, sanityConfig)
         return (
           <>
-            <figure className="flex justify-center">
-              <div>
+            <div className="flex w-1/2 justify-center">
+              <Img fluid={fluidProps} className=" w-1/2"/>
+
+              {/* <div>
                 <img
                   // src={urlFor(props.node.image).url()}
                   // Above src wasn't actually accessing the photo correctly,
@@ -79,8 +87,8 @@ const BlockContentPrimary = ({ blockData }) => {
                     {props.node.caption}
                   </figcaption>
                 )}
-              </div>
-            </figure>
+              </div> */}
+            </div>
           </>
         )
       },

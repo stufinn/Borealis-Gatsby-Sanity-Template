@@ -8,13 +8,14 @@ import Moment from "react-moment"
 import Layout from "../components/layout"
 import SEO from "../components/SEO"
 import FeatureImage from "../components/FeatureImage"
+import BlockContentPrimary from "../components/block content/blockContentPrimary"
 
 // TO DO: Add rich text content!
 
 const urlFor = source =>
   urlBuilder({
-    projectId: process.env.SANITY_ID,
-    dataset: process.env.SANITY_DATASET,
+    projectId: process.env.GATSBY_SANITY_ID,
+    dataset: process.env.GATSBY_SANITY_DATASET,
   }).image(source)
 
 const serializer = {
@@ -58,7 +59,8 @@ const BlogPostTemplate = ({ data }) => {
           {featureImage ? <FeatureImage fluid={featureImage} /> : null}
 
           <div className="blogPost__contentContainer">
-            <PortableText blocks={rawPostContent} serializers={serializer} />
+            <BlockContentPrimary blockData={rawPostContent}/>
+            {/* <PortableText blocks={rawPostContent} serializers={serializer} /> */}
           </div>
           {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
         </div>
@@ -83,7 +85,7 @@ export const query = graphql`
       publishedDate
       title
       summary
-      _rawPostContent
+      _rawPostContent(resolveReferences: {maxDepth: 10})
       featureImage {
         asset {
           fluid {
