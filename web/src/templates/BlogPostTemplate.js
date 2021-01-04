@@ -44,11 +44,11 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={`${data.sanityBlogPost.title}`} />
-      <div className="blogPost">
-        <div className="blogPost__container">
-          <div className="blogPost__topContent">
-            <h1 className="blogPost__title">{data.sanityBlogPost.title}</h1>
-            <div className="blogPost__date">
+      <div className="">
+
+          <div className="">
+            <h1 className="">{data.sanityBlogPost.title}</h1>
+            <div className="">
               Published:&nbsp;
               <Moment format="YYYY/MM/DD">
                 {publishedDate || createdAtDate}
@@ -58,14 +58,13 @@ const BlogPostTemplate = ({ data }) => {
 
           {featureImage ? <FeatureImage fluid={featureImage} /> : null}
 
-          <div className="blogPost__contentContainer">
+          <div className="">
             <BlockContentPrimary blockData={rawPostContent}/>
             {/* <PortableText blocks={rawPostContent} serializers={serializer} /> */}
           </div>
-          {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-        </div>
+        
 
-        <Link className="settings__mainButton blogpost__button" to="/updates">
+        <Link className="" to="/updates">
           View all posts
         </Link>
       </div>
