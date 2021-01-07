@@ -35,3 +35,8 @@ Whenever a change is made in the sanity studio, in order for that new data to be
 Within GitHub, the default branch is **development**. All new branches and pull requests should be made from this branch.
 
 _Pull requests require review by one other person before being merged into development._
+
+
+========
+
+To configure Netlify dev, run "netlify init" from the root directory (i.e. not /web or /studio) and follow the prompts there
