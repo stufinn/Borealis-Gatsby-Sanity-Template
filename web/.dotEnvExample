@@ -1,5 +1,5 @@
 //This File is for example only.  You will need to create your own .env file. For dotenv file values, contact stu@borealisweb.ca
 
-SANITY_TOKEN="<sanity-token>"
-GATSBY_SANITY_ID="<sanity-id>"
-GATSBY_SANITY_DATASET="<sanity-dataset>"
+GATSBY_SANITY_ID=""
+GATSBY_SANITY_DATASET=""
+SANITY_TOKEN=""

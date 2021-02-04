@@ -1,2 +1,5 @@
-SANITY_STUDIO_API_PROJECT_ID="<id>"
-SANITY_STUDIO_API_DATASET="<datasetName>"
+SANITY_STUDIO_API_PROJECT_ID=""
+SANITY_STUDIO_API_DATASET=""
+
+
+*** note that you require BOTH a .env.development AND a .env.production file for the ENV variables to work properly ***
