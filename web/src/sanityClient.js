@@ -2,6 +2,6 @@
 import sanityClient from "@sanity/client"
 
 export const mySanityClient = sanityClient({
-  projectId: "8n88jtx1",
-  dataset: "production",
+  projectId: process.env.GATSBY_SANITY_ID,
+  dataset: process.env.GATSBY_SANITY_DATASET,
 })
