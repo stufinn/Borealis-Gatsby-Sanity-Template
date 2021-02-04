@@ -1,4 +1,4 @@
-import { BiPhotoAlbum } from 'react-icons/bi';
+import { BiPhotoAlbum } from 'react-icons/bi'
 
 export default {
   name: 'albums',
@@ -33,6 +33,7 @@ export default {
       title: 'Images',
       name: 'albumImages',
       type: 'array',
+      validation: (Rule) => Rule.required(),
       of: [
         {
           name: 'image',
@@ -49,4 +50,4 @@ export default {
         'Optional: Provide/Specify an Album cover image. If one is not provided, the first image in the album is used as the album cover.',
     },
   ],
-};
+}
