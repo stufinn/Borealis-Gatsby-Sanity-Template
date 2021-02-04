@@ -6,8 +6,9 @@ import Layout from "../components/layout"
 
 const IndexPage = ({ data }) => {
   const { sanityHomePage } = data
-  const { title } = sanityHomePage
-  debugger
+  // Use provide dpage title or default if not available
+  const title = sanityHomePage ? sanityHomePage.title : "Page Title"
+
   return (
     <Layout>
       <SEO title="Home" />
