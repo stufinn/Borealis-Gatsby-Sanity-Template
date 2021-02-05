@@ -1,8 +1,8 @@
 {
   "root": true,
   "api": {
-    "projectId": "This is value is read directly from the .env.development or .env.production file",
-    "dataset": "This is value is read directly from the .env.development or .env.production file"
+    "projectId": "",
+    "dataset": ""
   },
   "project": {
     "name": "Borealis Gatsby Sanity Template"
@@ -16,9 +16,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
