@@ -36,15 +36,15 @@ export default {
   preview: {
     select: {
       title: 'imageTitle',
-      media: 'myImage', //why doesn't this work?
+      imageUrl: 'asset.url',
       altText: 'altText',
     },
     prepare(selection) {
-      const { title, media, altText } = selection;
+      const { title, media, altText } = selection
       return Object.assign({}, selection, {
         title: title,
         subtitle: altText,
-      });
+      })
     },
   },
-};
+}
