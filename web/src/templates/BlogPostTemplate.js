@@ -9,18 +9,15 @@ import Layout from "../components/layout"
 import SEO from "../components/SEO"
 import FeatureImage from "../components/FeatureImage"
 import BlockContentPrimary from "../components/block content/blockContentPrimary"
+import gatsbyConfig from "../../gatsby-config"
 
 // TO DO: Add rich text content!
 
-const urlFor = source =>
-  urlBuilder({
-    projectId: process.env.GATSBY_SANITY_ID,
-    dataset: process.env.GATSBY_SANITY_DATASET,
-  }).image(source)
+const urlFor = (source) => urlBuilder(gatsbyConfig).image(source)
 
 const serializer = {
   types: {
-    inlineImage: props => (
+    inlineImage: (props) => (
       <img
         className="settings__inlineImage"
         alt={props.node.alt}
@@ -45,24 +42,22 @@ const BlogPostTemplate = ({ data }) => {
     <Layout>
       <SEO title={`${data.sanityBlogPost.title}`} />
       <div className="">
-
+        <div className="">
+          <h1 className="">{data.sanityBlogPost.title}</h1>
           <div className="">
-            <h1 className="">{data.sanityBlogPost.title}</h1>
-            <div className="">
-              Published:&nbsp;
-              <Moment format="YYYY/MM/DD">
-                {publishedDate || createdAtDate}
-              </Moment>
-            </div>
+            Published:&nbsp;
+            <Moment format="YYYY/MM/DD">
+              {publishedDate || createdAtDate}
+            </Moment>
           </div>
+        </div>
 
-          {featureImage ? <FeatureImage fluid={featureImage} /> : null}
+        {featureImage ? <FeatureImage fluid={featureImage} /> : null}
 
-          <div className="">
-            <BlockContentPrimary blockData={rawPostContent}/>
-            {/* <PortableText blocks={rawPostContent} serializers={serializer} /> */}
-          </div>
-        
+        <div className="">
+          <BlockContentPrimary blockData={rawPostContent} />
+          {/* <PortableText blocks={rawPostContent} serializers={serializer} /> */}
+        </div>
 
         <Link className="" to="/updates">
           View all posts
@@ -84,7 +79,7 @@ export const query = graphql`
       publishedDate
       title
       summary
-      _rawPostContent(resolveReferences: {maxDepth: 10})
+      _rawPostContent(resolveReferences: { maxDepth: 10 })
       featureImage {
         asset {
           fluid {

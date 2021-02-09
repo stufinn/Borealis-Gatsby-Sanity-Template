@@ -1,7 +1,5 @@
 // npm package and readme: https://www.npmjs.com/package/@sanity/client
 import sanityClient from "@sanity/client"
+import { sanityConfig } from "./sanityConfig"
 
-export const mySanityClient = sanityClient({
-  projectId: process.env.GATSBY_SANITY_ID,
-  dataset: process.env.GATSBY_SANITY_DATASET,
-})
+export const mySanityClient = sanityClient(sanityConfig)
